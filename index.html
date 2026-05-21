@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantriAI - AI Islami Modern</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <span class="crescent">☪</span>
+                    <span class="text">SantriAI</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>📚 Kategori Ilmu</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#fikih" class="nav-link active">Fikih</a></li>
+                    <li><a href="#tafsir" class="nav-link">Tafsir</a></li>
+                    <li><a href="#hadits" class="nav-link">Hadits</a></li>
+                    <li><a href="#nahwu" class="nav-link">Nahwu</a></li>
+                    <li><a href="#sharaf" class="nav-link">Sharaf</a></li>
+                    <li><a href="#umum" class="nav-link">Umum</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-secondary" id="toggleSidebar">
+                    <span>‹</span> Sembunyikan
+                </button>
+            </div>
+        </aside>
+
+        <!-- Chat Area -->
+        <div class="chat-container">
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="welcome-message">
+                    <div class="message-avatar">
+                        <span>🤖</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <strong>SantriAI</strong>
+                            <span class="message-time">Online</span>
+                        </div>
+                        <div class="message-text">
+                            <p>Assalamu'alaikum warahmatullahi wabarakatuh! 😊</p>
+                            <p>Selamat datang di SantriAI, AI Islami Modern yang siap membantu Anda belajar ilmu agama dengan adab yang baik.</p>
+                            <p>Ada yang bisa saya bantu? Silakan ketik pertanyaan Anda di bawah ini.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <form id="messageForm">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Ketik pesan Anda disini..." 
+                            autocomplete="off"
+                        />
+                        <button type="submit" class="send-button">
+                            <span>›</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="crescent">☪</span>
+                <span class="text">SantriAI</span>
+            </div>
+            <div class="loading-text">Sedang memuat...</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Modal untuk API Key -->
+    <div class="modal" id="apiKeyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🔑 API Key SantriAI</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Masukkan API Key Anda untuk memulai:</p>
+                <input type="password" id="apiKeyInput" placeholder="Masukkan API Key OpenAI" />
+                <button class="btn btn-primary" id="saveApiKey">Simpan</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
